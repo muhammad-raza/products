@@ -1,0 +1,50 @@
+{
+  "catalogues": [
+    {
+      "location": "London",
+      "catalogue": {
+        "sports": [
+          {
+            "id": "product1",
+            "name": "ArsenalTV"
+          },
+          {
+            "id": "product2",
+            "name": "ChelseaTV"
+          }
+        ],
+        "news": [
+          {
+            "id": "product3",
+            "name": "Sky News"
+          },
+          {
+            "id": "product4",
+            "name": "Sky Sports News"
+          }
+        ]
+      }
+    },
+    {
+      "location": "Liverpool",
+      "catalogue": {
+        "sports": [
+          {
+            "id": "product5",
+            "name": "LiverpoolTV"
+          }
+        ],
+        "news": [
+          {
+            "id": "product3",
+            "name": "Sky News"
+          },
+          {
+            "id": "product4",
+            "name": "Sky Sports News"
+          }
+        ]
+      }
+    }
+  ]
+}

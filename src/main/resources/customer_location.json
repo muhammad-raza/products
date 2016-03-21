@@ -1,0 +1,12 @@
+{
+  "customerLocations": [
+    {
+      "id": "customer1",
+      "location": "London"
+    },
+    {
+      "id": "customer2",
+      "location": "Liverpool"
+    }
+  ]
+}

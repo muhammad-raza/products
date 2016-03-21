@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sky Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="resources/css/catalogue.css" th:href="@{/resources/css/catalogue.css}" />
+</head>
+<body>
+<img th:src="@{/resources/images/header.png}" src="resources/images/header.png"/>
+<div th:class="catalogue_container">
+    <div th:if="${locationBasedCatalogue}" th:attr="data-id=${customerID}" th:id="catalogues" th:class="catalogues">
+        <div th:class="title" th:text="'Products available in ' + ${locationBasedCatalogue.location}"></div>
+
+        <div th:class="catalogue_sports">
+            <div th:class="catalogue_title">Sports</div>
+            <ul th:each="catalogues : ${locationBasedCatalogue.catalogue.sports}">
+                <li>
+                    <input type="checkbox" th:id="${catalogues.id}" th:value="${catalogues.name}" />
+                    <label th:for="${catalogues.id}" th:text="${catalogues.name}"><span></span></label>
+                </li>
+            </ul >
+        </div>
+
+        <div th:class="catalogue_news">
+            <div th:class="catalogue_title">News</div>
+            <ul th:each="catalogues : ${locationBasedCatalogue.catalogue.news}">
+                <li>
+                    <input type="checkbox" th:id="${catalogues.id}" th:value="${catalogues.name}" />
+                    <label th:for="${catalogues.id}" th:text="${catalogues.name}">name</label>
+                </li>
+            </ul >
+        </div>
+
+        <div th:class="catalogue_basket">
+            <div th:class="catalogue_title">Basket</div>
+            <ul id="basket"></ul>
+            <a th:href="@{/confirmation}" th:class="basket_checkout">Checkout</a>
+        </div>
+    </div>
+
+    <div th:unless="${locationBasedCatalogue}" th:id="catalogues" th:class="catalogues">
+        <div th:class="title_error" th:text="'There was a problem retrieving the customer information'"></div>
+    </div>
+
+</div>
+<img th:src="@{/resources/images/image_one.png}" src="resources/images/image_one.png"/>
+<img th:src="@{/resources/images/image_two.png}" src="resources/images/image_two.png"/>
+<img th:src="@{/resources/images/image_three.png}" src="resources/images/image_thee.png"/>
+<img th:src="@{/resources/images/footer.png}" src="resources/images/header.png"/>
+
+
+<script src="resources/bower_components/requirejs/require.js"></script>
+<script src="resources/js/config.js"></script>
+<script src="resources/js/catalogue.js"></script>
+
+</body>
+</html>

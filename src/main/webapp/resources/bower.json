@@ -1,0 +1,10 @@
+{
+  "name": "products",
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "requirejs": "~2.1.17",
+    "underscore": "~1.6.0",
+    "backbone": "~1.1.2",
+    "backbone.localstorage": "~1.1.16"
+  }
+}

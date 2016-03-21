@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sky Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="resources/css/catalogue.css" th:href="@{/resources/css/catalogue.css}" />
+</head>
+<body>
+<img th:src="@{/resources/images/header.png}" src="resources/images/header.png"/>
+
+<div th:class="catalogue_container">
+    <div th:id="catalogues" th:class="catalogues">
+
+        <div th:class="catalogue_basket">
+            <div th:class="catalogue_title">Basket</div>
+            <ul id="basket"></ul>
+            <div th:class="basket_checkout">Confirm and Pay</div>
+        </div>
+    </div>
+</div>
+
+<img th:src="@{/resources/images/image_one.png}" src="resources/images/image_one.png"/>
+<img th:src="@{/resources/images/image_two.png}" src="resources/images/image_two.png"/>
+<img th:src="@{/resources/images/image_three.png}" src="resources/images/image_thee.png"/>
+<img th:src="@{/resources/images/footer.png}" src="resources/images/header.png"/>
+
+<script src="resources/bower_components/requirejs/require.js"></script>
+<script src="resources/js/config.js"></script>
+<script src="resources/js/confirmation.js"></script>
+
+</body>
+</html>

@@ -37,9 +37,9 @@ to build the app, just navigate to home directory from terminal and execute comm
 **build.sh install (windows)**
 
 This will download all maven dependencies to your local repository.
-You can start server by executing this maven goal
+You can start server from
 
-**./build.sh exec:java**
+**ApplicationStarter.java**
 
 The server will start at
 
